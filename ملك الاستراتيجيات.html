@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ملك الاستراتيجيات</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#000;--panel:#120a1f;--line:#2a1b45;--p:#8b3dff;--p2:#c4a1ff;--tx:#f3ecff;--mut:#a89bc2;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Cairo",system-ui,sans-serif;line-height:1.8}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:800;font-size:1.15rem;display:flex;align-items:center;gap:8px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:var(--mut);font:inherit;padding:4px 16px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--p);color:#fff}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--p2);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:50px 0 70px}
+h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.15;margin:0 0 16px;font-weight:800}
+.hero p{color:var(--mut);font-size:1.1rem;max-width:34em;margin:0 0 26px}
+.btn{display:inline-block;background:var(--p);color:#fff;text-decoration:none;font-weight:600;padding:12px 28px;border-radius:10px}
+.btn:hover{background:#9d5cff}
+.chart{width:100%;height:auto}
+.crown-glow{animation:glow 3s ease-in-out 1}
+@keyframes glow{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.crown-glow{animation:none}}
+section{padding:50px 0;border-top:1px solid var(--line)}
+h2{font-size:1.8rem;margin:0 0 8px}
+.sub{color:var(--mut);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 6px;color:var(--p2)}
+.card p{margin:0;color:var(--mut)}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
+label{display:block;margin-bottom:12px;color:var(--mut);font-size:.95rem}
+input{width:100%;background:#000;border:1px solid var(--line);border-radius:8px;color:var(--tx);font:inherit;padding:8px 12px;margin-top:4px}
+.res{display:flex;flex-direction:column;justify-content:center;gap:6px}
+.big{font-size:2.4rem;font-weight:800;color:var(--p2);line-height:1.2}
+.note{color:var(--mut);font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--mut);font-size:.88rem}
+@media (max-width:760px){.hero,.grid,.calc{grid-template-columns:1fr}.hero{padding-top:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo"><svg width="26" height="26" viewBox="0 0 24 24" fill="#8b3dff" aria-hidden="true"><path d="M3 18 2 7l5 4 5-7 5 7 5-4-1 11z"/><rect x="3" y="19.5" width="18" height="2" rx="1"/></svg><span data-i18n="brand"></span></div>
+  <div class="lang" role="group" aria-label="Language"><button data-l="ar" aria-pressed="true">العربية</button><button data-l="en" aria-pressed="false">English</button></div>
+</header>
+
+<div class="hero">
+  <div>
+    <h1 data-i18n="h1"></h1>
+    <p data-i18n="lead"></p>
+    <a class="btn" href="#calc" data-i18n="cta"></a>
+  </div>
+  <svg class="chart crown-glow" viewBox="0 0 320 280" role="img" aria-label="Candlestick chart">
+    <g stroke="#2a1b45"><path d="M10 60H310M10 120H310M10 180H310M10 240H310"/></g>
+    <g stroke-width="2" stroke="#8b3dff" fill="#8b3dff">
+      <path d="M40 190V110"/><rect x="30" y="140" width="20" height="40" fill="none"/>
+      <path d="M90 170V90"/><rect x="80" y="110" width="20" height="50"/>
+      <path d="M140 140V70"/><rect x="130" y="85" width="20" height="45"/>
+      <path d="M190 150V100"/><rect x="180" y="110" width="20" height="30" fill="none"/>
+      <path d="M240 120V40"/><rect x="230" y="55" width="20" height="55"/>
+    </g>
+    <path d="M25 205 85 150 135 118 185 128 245 62" fill="none" stroke="#c4a1ff" stroke-width="2" stroke-dasharray="5 5"/>
+    <path d="M262 30 258 8l9 7 7-11 7 11 9-7-4 22z" fill="#c4a1ff"/>
+  </svg>
+</div>
+
+<section id="learn">
+  <h2 data-i18n="h2a"></h2>
+  <p class="sub" data-i18n="suba"></p>
+  <div class="grid">
+    <div class="card"><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p></div>
+    <div class="card"><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p></div>
+    <div class="card"><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p></div>
+  </div>
+</section>
+
+<section id="calc">
+  <h2 data-i18n="h2b"></h2>
+  <p class="sub" data-i18n="subb"></p>
+  <div class="calc">
+    <div>
+      <label><span data-i18n="cap"></span><input id="cap" type="number" min="0" value="1000" inputmode="decimal"></label>
+      <label><span data-i18n="risk"></span><input id="risk" type="number" min="0" max="100" step="0.1" value="1" inputmode="decimal"></label>
+      <label><span data-i18n="entry"></span><input id="entry" type="number" min="0" step="any" value="100" inputmode="decimal"></label>
+      <label><span data-i18n="stop"></span><input id="stop" type="number" min="0" step="any" value="98" inputmode="decimal"></label>
+    </div>
+    <div class="res" aria-live="polite">
+      <span class="note" data-i18n="maxloss"></span>
+      <span class="big" id="loss">—</span>
+      <span class="note" data-i18n="size"></span>
+      <span class="big" id="size">—</span>
+    </div>
+  </div>
+</section>
+
+<footer data-i18n="disc"></footer>
+</div>
+
+<script>
+var T={
+ar:{brand:"ملك الاستراتيجيات",h1:"ابدأ التداول بخطة، لا بالحظ",lead:"دروس مبسطة للمبتدئين: افهم السوق، تعلم الاستراتيجيات الأساسية، وتحكم في المخاطرة قبل أن تضع أول صفقة.",cta:"احسب حجم صفقتك",h2a:"ثلاث استراتيجيات للبداية",suba:"ابدأ بواحدة فقط، وجربها على حساب تجريبي قبل أي مال حقيقي.",s1t:"تتبع الاتجاه",s1d:"اشترِ عندما يصنع السعر قممًا وقيعانًا أعلى، وبِع عندما تنخفض. لا تعاكس الاتجاه السائد.",s2t:"الدعم والمقاومة",s2d:"حدّد المستويات التي ارتد منها السعر أكثر من مرة، وانتظر الارتداد أو الاختراق قبل الدخول.",s3t:"إدارة المخاطرة",s3d:"لا تخاطر بأكثر من 1% إلى 2% من رأس مالك في صفقة واحدة، وضع وقف الخسارة دائمًا.",h2b:"حاسبة حجم الصفقة",subb:"أدخل أرقامك لتعرف أقصى خسارة وعدد الوحدات المناسب.",cap:"رأس المال",risk:"نسبة المخاطرة (%)",entry:"سعر الدخول",stop:"سعر وقف الخسارة",maxloss:"أقصى خسارة في الصفقة",size:"عدد الوحدات",disc:"المحتوى تعليمي فقط وليس نصيحة مالية. التداول ينطوي على مخاطر، وقد تخسر كامل رأس مالك.",bad:"أدخل سعري دخول ووقف مختلفين"},
+en:{brand:"King of Strategies",h1:"Start trading with a plan, not luck",lead:"Simple lessons for beginners: understand the market, learn the core strategies, and control your risk before you place your first trade.",cta:"Size your trade",h2a:"Three strategies to start with",suba:"Pick one, and practice it on a demo account before using real money.",s1t:"Trend following",s1d:"Buy when price makes higher highs and higher lows, sell when it falls. Don’t fight the dominant trend.",s2t:"Support and resistance",s2d:"Mark the levels where price has reversed more than once, then wait for a bounce or a breakout before entering.",s3t:"Risk management",s3d:"Never risk more than 1% to 2% of your capital on one trade, and always set a stop loss.",h2b:"Position size calculator",subb:"Enter your numbers to see your maximum loss and the right number of units.",cap:"Capital",risk:"Risk per trade (%)",entry:"Entry price",stop:"Stop-loss price",maxloss:"Maximum loss on this trade",size:"Units to trade",disc:"For education only, not financial advice. Trading involves risk and you can lose all your capital.",bad:"Entry and stop prices must differ"}
+};
+var lang="ar";
+try{var s=localStorage.getItem("lang");if(s==="en"||s==="ar")lang=s}catch(e){}
+function apply(){
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.title=T[lang].brand;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){el.textContent=T[lang][el.dataset.i18n]});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===lang)});
+  calc();
+}
+function fmt(n){return n.toLocaleString(lang==="ar"?"ar-EG":"en-US",{maximumFractionDigits:2})}
+function calc(){
+  var c=+cap.value,r=+risk.value,e=+entry.value,s=+stop.value;
+  var d=Math.abs(e-s),loss=c*r/100;
+  document.getElementById("loss").textContent=isFinite(loss)?fmt(loss):"—";
+  document.getElementById("size").textContent=d>0&&isFinite(loss)?fmt(loss/d):T[lang].bad;
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){lang=b.dataset.l;try{localStorage.setItem("lang",lang)}catch(e){}apply()}});
+["cap","risk","entry","stop"].forEach(function(id){document.getElementById(id).oninput=calc});
+apply();
+</script>
+</body>
+</html>
